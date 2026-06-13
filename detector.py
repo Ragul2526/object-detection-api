@@ -2,6 +2,7 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 import gc
+
 model = None
 def get_model():
     global model
