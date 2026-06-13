@@ -6,7 +6,7 @@ from PIL import Image
 app = FastAPI(
     title= "Object Detection API",
     description= "Upload an image and get detected objects using YOLO",
-    version = "1.0.0"
+    version = "1.0.2"
     )
 
 @app.get("/")

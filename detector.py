@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
-
+import gc
 model = None
 def get_model():
     global model
@@ -31,5 +31,8 @@ def detect_object(image : bytes):
     annotated = result[0].plot()
     _, buffer = cv2.imencode(".jpg",annotated)
     annotated_bytes = buffer.tobytes()
-     
+    #This is going to make it slower but it is to avoid RAM getting filled
+    del model
+    del result
+    gc.collect()
     return detect, annotated_bytes
