@@ -1,6 +1,6 @@
 # Object Detection API
 
-Upload any image to detect objects using YOLOv8. Built with FastAPI, deployed on Hugging Face Spaces.
+Upload any image to detect objects using YOLOv8. Built with FastAPI for Render,and deployed on Hugging Face Spaces.
 
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-yellow)](https://huggingface.co/spaces/roy2526/object-detection)
 
