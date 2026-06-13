@@ -2,12 +2,16 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 
-
-model = YOLO("yolov8n.pt") #the default model is yolo26n, the one used here is smallest and fastest
+model = None
+def get_model():
+    global model
+    if model is None:
+        model = YOLO("yolov8n.pt") #the default model is yolo26n, the one used here is smallest and fastest
+    return model
 def detect_object(image : bytes):
     nparr = np.frombuffer(image, np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    
+    model = get_model()
     result = model(img)
     
     detect = []
