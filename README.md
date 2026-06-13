@@ -92,6 +92,7 @@ Switched to **Hugging Face Spaces** which provides 16GB RAM for ML workloads —
 Render deployment:       https://object-detection-api-yetm.onrender.com
 
 Hugging Face deployment: https://huggingface.co/spaces/roy2526/object-detection
+
 ---
 
 ## YOLOv8 model variants
@@ -133,6 +134,3 @@ gradio
 
 numpy
 
----
-
-## Tech stack
